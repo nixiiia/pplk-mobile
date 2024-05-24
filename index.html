@@ -428,10 +428,10 @@
         </div>
     </footer>
 
-    <div class="modal" id="modal-window">
+    <section class="modal" id="modal-window">
         <div class="modal__inner">
             <div class="modal__header">
-                <button class="modal__close-btn" id="close-modal">
+                <button class="modal__close-btn">
                     <img src="./img/close-btn.svg" alt="">
                 </button>
             </div>
@@ -477,7 +477,24 @@
                 <button class="form__btn" id="send-form" type="submit">ОТПРАВИТЬ АНКЕТУ</button>
             </form>
         </div>
-    </div>
+    </section>
+
+    <section class="modal-sent" id="modal-sent">
+        <div class="modal-sent__inner">
+            <div class="modal__header">
+                <button class="modal__close-btn">
+                    <img src="./img/close-btn.svg" alt="close">
+                </button>
+            </div>
+            <h1 class="modal-sent__title">АНКЕТА ОТПРАВЛЕНА</h1>
+
+            <img class="modal-sent__img" src="./img/modal-swoosh.svg">
+            <p class="modal-sent__text">Благодарим за ваш отклик и интерес.</p>
+            <p class="modal-sent__text">Мы изучим вашу анкету и свяжемся с вами в течение 2х дней.</p>
+
+            <button class="modal-sent__btn" id="modal-close-btn">НА ГЛАВНУЮ</button>
+        </div>
+    </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./script/slick.min.js"></script>

@@ -446,7 +446,7 @@
                 <h3 class="form__subtitle">
                     Отклик на вакансию
                 </h3>
-                <select class="form__input form__select" name="select">
+                <select class="form__select" name="select">
                     <option value="">Выберите вакансию</option>
                 </select>
                 <h3 class="form__subtitle">
@@ -479,20 +479,27 @@
         </div>
     </section>
 
-    <section class="modal-sent" id="modal-sent">
-        <div class="modal-sent__inner">
+    <section class="modal-success" id="modal-success">
+        <div class="modal-success__inner">
             <div class="modal__header">
-                <button class="modal__close-btn">
+                <button class="modal__close-btn" onclick="closeModal('modal-success')">
                     <img src="./img/close-btn.svg" alt="close">
                 </button>
             </div>
-            <h1 class="modal-sent__title">АНКЕТА ОТПРАВЛЕНА</h1>
+            <h1 class="modal-success__title">АНКЕТА ОТПРАВЛЕНА</h1>
 
-            <img class="modal-sent__img" src="./img/modal-swoosh.svg">
-            <p class="modal-sent__text">Благодарим за ваш отклик и интерес.</p>
-            <p class="modal-sent__text">Мы изучим вашу анкету и свяжемся с вами в течение 2х дней.</p>
+            <img class="modal-success__img" src="./img/modal-swoosh.svg">
+            <p class="modal-success__text">
+                Благодарим<br>
+                за ваш отклик и интерес.
+            </p>
+            <p class="modal-success__text">
+                Мы изучим вашу анкету и свяжемся с вами в течение 2х дней.
+            </p>
 
-            <button class="modal-sent__btn" id="modal-close-btn">НА ГЛАВНУЮ</button>
+            <button class="modal-success__btn" id="modal-close-btn" onclick="closeModal('modal-success')">
+                НА ГЛАВНУЮ
+            </button>
         </div>
     </section>
 

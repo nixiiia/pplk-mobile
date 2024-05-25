@@ -93,7 +93,7 @@ body {
 }
 
 .main {
-  background: url(../img/main-background.jpg);
+  background: no-repeat url(../img/main-background.jpg);
 }
 
 .main__inner {
@@ -207,7 +207,7 @@ body {
 
   .main {
     padding-bottom: 45px;
-    background: center 40% url(../img/main-background.jpg);
+    background: center 40% url(../img/main-background.jpg) no-repeat;
     height: calc(100vh - 40px);
     display: flex;
     justify-content: center;
@@ -848,11 +848,12 @@ body {
     background-color: #262626;
     position: absolute;
     z-index: 15;
+    top: 50%;
     left: 50%;
     overflow-y: auto;
     overflow-x: hidden;
     margin: 0 auto;
-    transform: scale(0) translateX(-50%);
+    transform: scale(0) translate(-50%, -50%);
     transition: transform 0.8s;
   }
 
@@ -862,7 +863,7 @@ body {
   }
 
   .modal.open .modal__inner {
-    transform: scale(1) translateX(-50%);
+    transform: scale(1) translate(-50%, -50%);
   }
 
   .modal__header {
@@ -934,6 +935,12 @@ body {
   }
 
   .form__select {
+    border: none;
+    border-bottom: 3px solid #999;
+    background-color: transparent;
+    color: #fff;
+    padding: 15px 0 15px 10px;
+    width: 320px;
     appearance: none;
     background: url('../img/arrow.svg') no-repeat calc(100% - 10px);
     background-color: #262626;
@@ -1022,7 +1029,7 @@ body {
     transform: translateX(-50%);
   }
 
-  .modal-sent {
+  .modal-success {
     position: fixed;
     left: 0;
     top: 0;
@@ -1033,9 +1040,10 @@ body {
     overflow-y: auto;
     visibility: hidden;
     opacity: 0;
+    transition: opacity 0.4s, visibility 0.4s;
   }
 
-  .modal-sent__inner {
+  .modal-success__inner {
     max-width: 360px;
     background-color: #262626;
     position: absolute;
@@ -1050,34 +1058,34 @@ body {
     text-align: center;
   }
 
-  .modal-sent.open {
+  .modal-success.open {
     visibility: visible;
     opacity: 1;
   }
 
-  .modal-sent__title {
+  .modal-success__title {
     font-size: 18px;
     line-height: 22px;
     color: #999;
     text-transform: uppercase;
   }
 
-  .modal-sent__img {
+  .modal-success__img {
     margin: 80px 0 50px 0;
   }
 
-  .modal-sent__text {
+  .modal-success__text {
     font-size: 18px;
     line-height: 22px;
     padding: 0 60px;
   }
 
-  .modal-sent__text + .modal-sent__text {
+  .modal-success__text + .modal-success__text {
     margin-top: 15px;
     margin-bottom: 100px;
   }
 
-  .modal-sent__btn {
+  .modal-success__btn {
     font-weight: 700;
     font-size: 12px;
     line-height: 20px;
